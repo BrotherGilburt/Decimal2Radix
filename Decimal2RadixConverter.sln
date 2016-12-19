@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decimal2RadixConsole", "Decimal2RadixConsole\Decimal2RadixConsole.csproj", "{E600DE66-F833-4902-91E6-476097E54143}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decimal2Radix", "Decimal2Radix\Decimal2Radix.csproj", "{2B54DD33-DCD3-4A84-93BD-2EBE5562F915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decimal2RadixConverter", "Decimal2RadixConverter\Decimal2RadixConverter.csproj", "{4DC0A0D2-0F1D-4C01-AF9D-089B4E7E9E15}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E600DE66-F833-4902-91E6-476097E54143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E600DE66-F833-4902-91E6-476097E54143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E600DE66-F833-4902-91E6-476097E54143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E600DE66-F833-4902-91E6-476097E54143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B54DD33-DCD3-4A84-93BD-2EBE5562F915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B54DD33-DCD3-4A84-93BD-2EBE5562F915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B54DD33-DCD3-4A84-93BD-2EBE5562F915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B54DD33-DCD3-4A84-93BD-2EBE5562F915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC0A0D2-0F1D-4C01-AF9D-089B4E7E9E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC0A0D2-0F1D-4C01-AF9D-089B4E7E9E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC0A0D2-0F1D-4C01-AF9D-089B4E7E9E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC0A0D2-0F1D-4C01-AF9D-089B4E7E9E15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

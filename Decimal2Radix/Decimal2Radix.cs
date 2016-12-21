@@ -33,5 +33,34 @@ namespace Decimal2Radix
             
             return radNum;
         }
+
+        public static RadixNumber RadixNumberGenerator(int decNum, int radix)
+        {
+
+
+            return new RadixNumber(radix, RadixConvert(decNum, radix));
+        }
+    }
+
+    public class RadixNumber
+    {
+        private int radix;
+        private String number;
+
+        public RadixNumber(int radix, String number)
+        {
+            this.radix = radix;
+            this.number = number;            
+        }
+
+        public int getRadix()
+        {
+            return radix;
+        }
+
+        public String getNumber()
+        {
+            return number;
+        }
     }
 }

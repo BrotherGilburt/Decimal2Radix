@@ -4,10 +4,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Decimal2Radix</title>
     <style type="text/css">
         .auto-style1 {
-            text-align: left;
+            width: 300px;
+            text-align: center;
         }
     </style>
 </head>
@@ -15,56 +16,45 @@
     <form id="form1" runat="server">
     <div class="auto-style1">
     
-        Value:&nbsp;
-        <asp:TextBox ID="ValueBox" runat="server" BorderStyle="Solid" Height="16px" Width="137px"></asp:TextBox>
-&nbsp;
-        <asp:Button ID="convertButton" runat="server" EnableTheming="True" OnClick="convertButton_Click" Text="Convert" />
+        <div style="width: 300px; text-align: center; font-family: Arial; font-size: x-large; line-height: 150%"><b>Decimal2Radix Converter</b></div>
+        <asp:TextBox ID="ValueLabel" runat="server" BorderStyle="None" ReadOnly="True" style="font-weight: 700" Width="55px" Wrap="False" Font-Bold="True" Font-Names="Arial" Font-Size="Larger">Value:</asp:TextBox>
+        <asp:TextBox ID="ValueBox" runat="server" BorderStyle="Solid" Height="23px" Width="137px" OnTextChanged="ValueBox_TextChanged"></asp:TextBox>
+<!--&nbsp;-->
+        <asp:Button ID="convertButton" runat="server" EnableTheming="True" OnClick="convertButton_Click" Text="Convert" BackColor="White" BorderStyle="Solid" ForeColor="Black" Height="28px" style="margin-top: 0px" />
         <br />
         <br />
-        Radix 2: <asp:Label ID="radix2" runat="server"></asp:Label>
-        <br />
-        Radix 3:
-        <asp:Label ID="radix3" runat="server"></asp:Label>
-        <br />
-        Radix 4:
-        <asp:Label ID="radix4" runat="server"></asp:Label>
-        <br />
-        Radix 5:
-        <asp:Label ID="radix5" runat="server"></asp:Label>
-        <br />
-        Radix 6:
-        <asp:Label ID="radix6" runat="server"></asp:Label>
-        <br />
-        Radix 7:
-        <asp:Label ID="radix7" runat="server"></asp:Label>
-        <br />
-        Radix 8:
-        <asp:Label ID="radix8" runat="server"></asp:Label>
-        <br />
-        Radix 9:
-        <asp:Label ID="radix9" runat="server"></asp:Label>
-        <br />
-        Radix 10:
-        <asp:Label ID="radix10" runat="server"></asp:Label>
-        <br />
-        Radix 11:
-        <asp:Label ID="radix11" runat="server"></asp:Label>
-        <br />
-        Radix 12:
-        <asp:Label ID="radix12" runat="server"></asp:Label>
-        <br />
-        Radix 13:
-        <asp:Label ID="radix13" runat="server"></asp:Label>
-        <br />
-        Radix 14:
-        <asp:Label ID="radix14" runat="server"></asp:Label>
-        <br />
-        Radix 15:
-        <asp:Label ID="radix15" runat="server"></asp:Label>
-        <br />
-        Radix 16:
-        <asp:Label ID="radix16" runat="server"></asp:Label>
-    
+        <asp:Repeater ID="DataTableRepeater" runat="server" OnItemCommand="DataTableRepeater_ItemCommand">
+            <HeaderTemplate>
+                <style>
+                    table, td
+                    {
+                        border-top: 1px solid black;
+                        border-left: 1px solid black;
+                        border-right: 1px solid black;
+                        border-bottom: 1px solid black;
+                        font-size: larger;
+                        padding: 5px;
+                    }
+                    table
+                    {
+                        border-collapse: collapse;
+                        text-align: left
+                    }
+                </style>
+                <table id="dataTable" style="font-family: Arial">
+            </HeaderTemplate>
+            <ItemTemplate>
+
+                    <tr>
+                        <td style="width: 100px"><asp:Label ID="RowLabel" runat="server" Text='<%#Eval("label") %>' Font-Bold="True"></asp:Label></td>
+                        <td style="width: 200px"><asp:Label ID="NumberLabel" runat="server" Text='<%#Eval("number") %>'></asp:Label></td>
+                    </tr>
+
+            </ItemTemplate>
+            <FooterTemplate>
+                    </table>
+            </FooterTemplate>
+        </asp:Repeater>
     </div>
     </form>
 </body>

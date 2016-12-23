@@ -28,7 +28,7 @@ namespace Decimal2RadixConverter {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ValueLabel;
+        protected global::System.Web.UI.WebControls.Label ValueLabel;
         
         /// <summary>
         /// ValueBox control.
@@ -47,6 +47,15 @@ namespace Decimal2RadixConverter {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button convertButton;
+        
+        /// <summary>
+        /// InvalidInputLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label InvalidInputLabel;
         
         /// <summary>
         /// DataTableRepeater control.

@@ -11,6 +11,8 @@ namespace Decimal2RadixConverter
 
     public partial class Main : System.Web.UI.Page
     {
+        int counter = 0;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             FillRepeater(false);
@@ -18,13 +20,29 @@ namespace Decimal2RadixConverter
 
         protected void convertButton_Click(object sender, EventArgs e)
         {
+            int discard = 0;
+            if (Int32.TryParse(ValueBox.Text, out discard))
+            {
+                InvalidInputLabel.Visible = false;
+                FillRepeater(true);
+            }
+            else
+            {
+                InvalidInputLabel.Visible = true;
+            }
+
+            /*
             if (!ValueBox.Text.Equals(String.Empty))
                 FillRepeater(true);
+            */
         }
 
         protected void ValueBox_TextChanged(object sender, EventArgs e)
         {
-
+            if(ValueBox.Text.Equals(String.Empty))
+            {
+                InvalidInputLabel.Visible = false;
+            }
         }
 
         public class DataRow
@@ -41,6 +59,7 @@ namespace Decimal2RadixConverter
 
         protected void FillRepeater(bool  isInput)
         {
+            counter = 0;
             List<DataRow> radixData = new List<DataRow>();
 
             if(isInput)
@@ -63,9 +82,15 @@ namespace Decimal2RadixConverter
             DataTableRepeater.DataBind();            
         }
 
-        protected void DataTableRepeater_ItemCommand(object source, RepeaterCommandEventArgs e)
+        protected String getRowColour()
         {
-            
+            if (counter % 2 == 0)
+            {
+                counter++;
+                return "background-color: #e5e6eb";
+            }
+            counter++;
+            return "background-color: white";
         }
     }
 }

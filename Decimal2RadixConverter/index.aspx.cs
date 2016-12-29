@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,8 +12,13 @@ namespace Decimal2RadixConverter
 
     public partial class Main : System.Web.UI.Page
     {
-        int counter = 0;
+        private int counter = 0;
 
+        /// <summary>
+        /// Fills the repeater on page load.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
             FillRepeater(false);
@@ -28,13 +34,10 @@ namespace Decimal2RadixConverter
             }
             else
             {
+                ValueBox.Text = String.Empty;
+                FillRepeater(false);
                 InvalidInputLabel.Visible = true;
             }
-
-            /*
-            if (!ValueBox.Text.Equals(String.Empty))
-                FillRepeater(true);
-            */
         }
 
         protected void ValueBox_TextChanged(object sender, EventArgs e)
@@ -47,7 +50,7 @@ namespace Decimal2RadixConverter
 
         public class DataRow
         {
-            public  String label { get;}
+            public String label { get;}
             public String number { get;}
 
             public DataRow(String label, String number)
@@ -82,7 +85,7 @@ namespace Decimal2RadixConverter
             DataTableRepeater.DataBind();            
         }
 
-        protected String getRowColour()
+        protected String getRowColor()
         {
             if (counter % 2 == 0)
             {

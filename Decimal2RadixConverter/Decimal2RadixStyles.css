@@ -1,0 +1,151 @@
+﻿/*Page*/
+        Body {
+            /*background-color: #f8f8fa;*/
+        }
+
+        .Page {
+            width: 100%;
+            text-align: center;
+            font-family: Arial;
+        }
+
+        /*Navigation Bar*/
+        .title-bar-style {
+            width: 100%;
+            text-align: left;
+            font-size: x-large;
+            font-weight: bold;
+            line-height: 150%;
+            background-color: #63ace5; 
+            color: #FFFFFF;
+            padding-left: 5px;
+        }
+
+        .menu-bar {
+            width: 100%;
+            text-align: left;
+            font-family: Arial;
+            font-size: large;
+            line-height: 150%;
+            background-color: #4b86b4;
+            color: #FFFFFF;
+            padding-left: 5px;
+            font-weight: bold;
+        }
+        
+        .link {
+            color: white;
+        }
+
+        .link:hover {
+            color: lightgray;
+        }
+
+        /*Content*/
+        .content-style {
+            width: 875px;
+            min-height: 600px;
+            border-style: solid;
+            border-color: #4b86b4;
+            padding: 5px;
+            padding-left:15px;
+            padding-right:15px;
+            margin: auto;
+            align-content: center;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /*Index Input*/
+        .input {
+            float: left;
+            width: 300px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .input__label {
+            border-style: none;
+            font-weight: bold;
+            height: 25px;
+            width: 60px;
+            vertical-align: middle;
+            word-wrap: normal;
+            font-size: large;
+        }
+
+        .input__button {
+            background-color: #0066FF;
+            height: 25px;
+            border-style: none;
+            color: white;
+            margin-top: 0px;
+            font-weight: bold;
+        }
+
+        .input__box {
+            border-style: solid;
+            height: 25px;
+            width: 140px;
+        }
+
+        .input__error {
+            font-weight: bold;
+            color: red;
+        }
+
+        .input__instructions  {
+            text-align: left;
+        }
+
+        /*Index Output*/
+        .data-holder {
+            display: inline-block;
+            float: right;
+            height: 600px;
+        }
+        
+        .data-table {
+            border-collapse: collapse;
+            text-align: left;
+            height: 100%;
+        }
+        
+        .data-cell {
+            font-size: x-large;
+            padding: 5px;
+            white-space: nowrap;
+        }
+
+        .data-cell.first {
+            width: 100px;
+        }
+
+        .data-cell.second {
+            width: 400px;
+        }
+
+        /*About*/
+        .about__text {
+            float: left;
+            width: 50%;
+            font-size: medium;
+            padding-top: 15px;
+        }
+
+        .about__image {
+            float: left;
+            padding-left: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /*Donate*/
+        .donate__text {
+            text-align: center;
+            font-style: italic;
+        }

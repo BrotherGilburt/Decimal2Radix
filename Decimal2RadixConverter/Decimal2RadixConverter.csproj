@@ -68,6 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="about.aspx" />
+    <Content Include="Decimal2RadixStyles.css" />
     <Content Include="donate.aspx" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
